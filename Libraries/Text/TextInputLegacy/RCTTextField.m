@@ -35,7 +35,8 @@
     self.delegate = self;
     self.drawsBackground = NO;
     self.bordered = NO;
-    self.bezeled = YES;
+    self.bezeled = NO;
+    self.backgroundColor = [NSColor clearColor];
     // self.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
 
     _eventDispatcher = eventDispatcher;
@@ -163,7 +164,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
 {
   if (backgroundColor) {
     [self setDrawsBackground:YES];
-    [self.cell setBackgroundColor:backgroundColor];
+    [self.cell setBackgroundColor:[NSColor clearColor]];
   }
 }
 
